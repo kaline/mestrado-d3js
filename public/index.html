@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Mestrado - charts</title>
+    </head>
+    <body>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.0.0/d3.min.js"></script>
+
+        <header>
+            <h1>Charts</h1>
+        </header>
+
+        <main>
+            <div id="myPlot"></div>
+        </main>
+       
+        <script>
+            {
+                const width = 640;
+                const height = 400;
+                const marginTop = 20;
+                const marginRight = 20;
+                const marginBottom = 30;
+                const marginLeft = 40;
+
+                // Declare the x (horizontal position) scale.
+                const x = d3.scaleUtc()
+                .domain([new Date("2023-01-01"), new Date("2024-01-01")])
+                .range([marginLeft, width - marginRight]);
+
+                console.log("x ", x)
+                //Declare y (vertical position) scale.
+
+                const svg = d3.select("#myPlot")
+                .append("svg")
+                .append("g")
+
+
+
+            }
+        </script>
+
+    </body>
+</html>
